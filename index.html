@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConaFM</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="Websitw Icon" type="png" href="img/log-conabeats.1.1.2.png" >
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <div class="header">
+        <div class="cont-target">
+            <h2>Top 50</h2>
+            <div class="line"></div>
+            <strong>MÉXICO</strong>
+        </div>
+        <div class="cont-logo">
+            <img src="img/log-conabeats.1.1.2.png" alt="" class="pic">
+            <h1>ConaFM</h1>
+            <p>El ritmo de tu escuela - Tus actualizaciones de las canciones mas escuchadas ahora mismo en México</p>
+            <div class="pie">
+                <img src="img/log-conabeats.1.1.2.png" alt="" class="logo">
+                <p> ConaBeats.1,833,560 me gusta 2 nuevas entradas</p>
+            </div>
+        </div>   
+    </div>     
+    <div class="cont-radio">
+        
+        <div class="music-player">
+
+        <div class="cont-sonido">
+            <img src="img/sonido.gif" alt="" class="sonido">
+        </div>
+    
+        <audio id="mi-audio" >
+            <source src="https://uk5freenew.listen2myradio.com/live.mp3?typeportmount=s1_6742_stream_669223590" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <div id="progress-bar">
+            <div></div>
+        </div>
+        <button id="play-pause">
+            <i class="fas fa-play"></i>
+        </button>
+
+        </div>
+       
+    </div>
+
+    <script>
+         const audio = document.getElementById('mi-audio');
+        const playPauseButton = document.getElementById('play-pause');
+        const progressBar = document.getElementById('progress-bar');
+        const progress = progressBar.querySelector('div');
+
+        playPauseButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                audio.pause();
+                playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            const progressPercent = (audio.currentTime / audio.duration) * 100;
+            progress.style.width = progressPercent + '%';
+        });
+
+        progressBar.addEventListener('click', (e) => {
+            const clickPosition = (e.offsetX / progressBar.offsetWidth) * audio.duration;
+            audio.currentTime = clickPosition;
+        });
+    </script>
+    
+            
+        
+</body>
+</html>

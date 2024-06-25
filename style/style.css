@@ -1,0 +1,188 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    padding: 10px;
+    background: #000;
+}
+.header{
+    width: auto;
+    display: flex;
+    background: linear-gradient(to bottom, #045D4E, #04342C);
+    padding: 0px 10px;
+    justify-content: start;
+    align-items: center;
+    border-radius: 10px 10px 0px    0px;
+}
+.cont-target{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 200px;
+    height: 200px;
+    background: #17735E;
+    border-radius: 5px;
+    margin: 30px;
+    box-shadow: 10px 0px 50px 6px #032621;
+}
+
+.cont-target h2{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+}
+.cont-target strong{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+.line{
+    width: 80%;
+    height: 2px;
+    background:  #2E7B6A;
+    margin: 20px 00px;
+}
+.pic{
+    width: 150px;
+    margin-left: 60px;
+    margin-top: 50px;
+    
+}
+.cont-logo{
+    margin-left: 50px;
+}
+.cont-logo h1{
+    font-size: 58px;
+    color: #fff;
+
+}
+.cont-logo p{
+    color: #b6b3b3;
+    font-weight: 500;
+    margin-top: 10px ;
+}
+.pie p{
+    color: #ffffff;
+    margin: 20px 10px;
+    font-weight: 600;
+}
+.logo{
+    width:20px;
+    height: 20px;
+    background-color: #00a552;
+    padding: 5px;
+    border-radius: 50%;
+}
+.pie{
+    display: flex;
+    align-items: center;
+}
+
+.cont-radio{
+    background: linear-gradient(to bottom , #032621, #121212 );
+    border-radius: 0px 0px 10px 10px ;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.music-player{
+    display: flex;
+    width: 70%;
+    height: 200px;
+    background-color: #000000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+.cont-sonido{
+    background: #00a552;
+           width: 60%; /* Ancho deseado del recorte */
+            height: 150px; /* Altura deseada del recorte */
+            overflow: hidden;
+
+    
+}
+.sonido{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Opciones: contain, fill, scale-down */
+}
+
+   
+
+        #progress-bar {
+            width: 90%;
+            height: 3px;
+            background-color: #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        #progress-bar div {
+            height: 100%;
+            background-color: #4a90e2;
+            border-radius: 5px;
+            width: 0;
+        }
+
+        #play-pause {
+            background-color:#00a552;
+            color: #000;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+@media (max-width: 768px){
+    .header{
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;       
+    }
+    .cont-target{
+        width: 90%;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .pic{
+        width: 120px;
+        margin-left: auto;
+        margin-top: auto;
+    }
+    .cont-logo h1{
+        font-size: 36px;
+    }
+    .cont-logo{
+        font-size: 12px;
+    }
+    .cont-radio{
+        padding: 10px;
+        height: 35vh;
+        display: flex;
+        justify-content: center;
+    }
+    .music-player{
+        margin:auto;
+        width: 90%;
+    }
+
+}
